@@ -1,5 +1,5 @@
 import { type NextApiHandler } from 'next'
-import { getPackageJson } from './lib/get-package-json'
+import { getPackageJson } from './lib/get-package-json.js'
 
 interface Config {
   enableHealth: boolean
