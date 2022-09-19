@@ -1,5 +1,5 @@
 import * as httpMocks from 'node-mocks-http'
-import nextActuator from '.'
+import nextActuator from '../index'
 
 describe('nextActuator', () => {
   describe('404', () => {

@@ -2,17 +2,18 @@
   "name": "@bueno-systems/next-actuator",
   "version": "0.0.0-semantic-release",
   "description": "Provide Next.js routes for monitoring and management of your application in Production.",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "author": "Jack Cuthbert <jckcthbrt@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -b",
+    "build": "rimraf dist && tsc",
     "prepublish": "yarn build",
     "lint": "eslint --ext .js,.ts,.tsx .",
-    "test": "jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
   },
   "files": [
     "dist"
@@ -64,6 +65,7 @@
     "next": "^12.3.0",
     "node-mocks-http": "^1.11.0",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
     "semantic-release": "^19.0.5",
     "ts-jest": "^29.0.1",
     "typescript": "^4.8.3"
