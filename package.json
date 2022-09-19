@@ -16,7 +16,7 @@
     "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
   },
   "files": [
-    "dist"
+    "dist/**"
   ],
   "engines": {
     "node": ">=16.0.0"
