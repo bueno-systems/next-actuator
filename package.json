@@ -73,5 +73,8 @@
   "peerDependencies": {
     "next": ">=12.0.0"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "resolutions": {
+    "npm/chalk": "^4.1.2"
+  }
 }
