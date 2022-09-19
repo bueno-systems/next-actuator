@@ -57,7 +57,7 @@ jobs:
 
   Release:
     needs: [Build, Test, Lint]
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next' }} 
     name: Release
     runs-on: ubuntu-latest
     steps:
@@ -75,4 +75,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: yarn semantic-release
